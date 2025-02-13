@@ -1,0 +1,152 @@
+
+quad#  opcode          result     arg1       arg2       label     
+1      if_greater                  a          b          23        
+2      jump                                              3
+3      if_less                     c          d          5         
+4      jump                                              7
+5      if_greatereq                e          f          23        
+6      jump                                              7
+7      if_lesseq                   g          h          9         
+8      jump                                              16
+9      if_eq                       i          'true'     13        
+10     jump                                              11
+11     assign          _t0        'true'    
+12     jump                                              14
+13     assign          _t0        'false'   
+14     if_eq                       'false'    j          23        
+15     jump                                              16
+16     if_eq                       k          'true'     20        
+17     jump                                              18
+18     assign          _t1        'true'    
+19     jump                                              21
+20     assign          _t1        'false'   
+21     if_eq                       'false'    l          23        
+22     jump                                              25
+23     assign          _t2        'true'    
+24     jump                                              26
+25     assign          _t2        'false'   
+
+quad#  opcode          result     arg1       arg2       label     
+1      if_eq                       a          'true'     9         
+2      jump                                              3
+3      if_eq                       b          'true'     9         
+4      jump                                              5
+5      assign          y          x         
+6      assign          _t0        y         
+7      if_eq                       _t0        'true'     9         
+8      jump                                              11
+9      assign          _t1        'true'    
+10     jump                                              12
+11     assign          _t1        'false'   
+12     if_eq                       _t1        'true'     14        
+13     jump                                              39
+14     assign          i          0         
+15     assign          _t2        i         
+16     if_less                     i          5          18        
+17     jump                                              22
+18     if_eq                       a          'true'     20        
+19     jump                                              22
+20     assign          _t3        'true'    
+21     jump                                              23
+22     assign          _t3        'false'   
+23     if_eq                       _t3        'true'     28        
+24     jump                                              35
+25     add             i          i          1         
+26     assign          _t4        i         
+27     jump                                              16
+28     param           i         
+29     call            print     
+30     getretval       _t5       
+31     jump                                              25
+32     add             i          i          1         
+33     assign          _t6        i         
+34     jump                                              25
+35     param           y         
+36     call            print     
+37     getretval       _t7       
+38     jump                                              56
+39     if_eq                       y          'true'     41        
+40     jump                                              43
+41     assign          _t8        'true'    
+42     jump                                              44
+43     assign          _t8        'false'   
+44     if_eq                       _t8        'true'     46        
+45     jump                                              56
+46     if_eq                       y          'true'     50        
+47     jump                                              48
+48     assign          _t9        'true'    
+49     jump                                              51
+50     assign          _t9        'false'   
+51     param           _t9       
+52     call            print     
+53     getretval       _t10      
+54     jump                                              56
+55     jump                                              39
+
+quad#  opcode          result     arg1       arg2       label     
+1      if_eq                       a          'true'     9         
+2      jump                                              3
+3      if_eq                       b          'true'     9         
+4      jump                                              5
+5      assign          y          x         
+6      assign          _t0        y         
+7      if_eq                       _t0        'true'     9         
+8      jump                                              11
+9      assign          _t1        'true'    
+10     jump                                              12
+11     assign          _t1        'false'   
+12     if_eq                       _t1        'true'     14        
+13     jump                                              39
+14     assign          i          0         
+15     assign          _t2        i         
+16     if_less                     i          5          18        
+17     jump                                              22
+18     if_eq                       a          'true'     20        
+19     jump                                              22
+20     assign          _t3        'true'    
+21     jump                                              23
+22     assign          _t3        'false'   
+23     if_eq                       _t3        'true'     28        
+24     jump                                              35
+25     add             i          i          1         
+26     assign          _t4        i         
+27     jump                                              16
+28     param           i         
+29     call            print     
+30     getretval       _t5       
+31     jump                                              25
+32     add             i          i          1         
+33     assign          _t6        i         
+34     jump                                              25
+35     param           y         
+36     call            print     
+37     getretval       _t7       
+38     jump                                              56
+39     if_eq                       y          'true'     41        
+40     jump                                              43
+41     assign          _t8        'true'    
+42     jump                                              44
+43     assign          _t8        'false'   
+44     if_eq                       _t8        'true'     46        
+45     jump                                              56
+46     if_eq                       y          'true'     50        
+47     jump                                              48
+48     assign          _t9        'true'    
+49     jump                                              51
+50     assign          _t9        'false'   
+51     param           _t9       
+52     call            print     
+53     getretval       _t10      
+54     jump                                              56
+55     jump                                              39
+
+quad#  opcode          result     arg1       arg2       label     
+1      if_eq                       a          'true'     3         
+2      jump                                              7
+3      if_eq                       'true'     'true'     7         
+4      jump                                              5
+5      assign          _t0        'true'    
+6      jump                                              8
+7      assign          _t0        'false'   
+8      assign          x          _t0       
+9      assign          _t1        x         
